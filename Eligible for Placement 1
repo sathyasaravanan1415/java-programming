@@ -1,0 +1,19 @@
+import java.util.*;
+public class solution{
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        if((a==1 && b>=70) || (a>=1 && b>=75))
+        {
+          System.out.println("Name of the Student:"+s);
+            System.out.println("John is Eligible for Placement");
+        
+        }else{
+            System.out.println("Name of the Student:"+s);
+               System.out.println("John is Not Eligible for Placement");
+           } 
+    }    
+    
+}
