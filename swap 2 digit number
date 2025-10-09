@@ -1,0 +1,15 @@
+import java.util.*;
+public class main{
+    public static void main(String [] args){
+    Scanner sc=new Scanner(System.in);
+     String s=sc.nextLine();
+    if(s.length()>=2){
+        char f=s.charAt(0);
+        char ss=s.charAt(1);
+        System.out.println(""+ss+f);
+    }else{
+        System.out.println("STDOUT");
+    }
+    
+}
+}
