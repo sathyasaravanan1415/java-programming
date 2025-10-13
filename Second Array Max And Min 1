@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int length = scanner.nextInt();
+        int[] arr = new int[length];
+        for (int i = 0; i < length; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        int evenCount = 0;
+        int oddCount = 0;
+        for (int i = 0; i < length; i++) {
+            if (i % 2 == 0)
+                evenCount++;
+            else
+                oddCount++;
+        }
+        int[] evenPos = new int[evenCount];
+        int[] oddPos = new int[oddCount];
+
+        int e = 0, o = 0;
+        for (int i = 0; i < length; i++) {
+            if (i % 2 == 0)
+                evenPos[e++] = arr[i];
+            else
+                oddPos[o++] = arr[i];
+        }
+
+        Arrays.sort(evenPos); 
+        Arrays.sort(oddPos); 
+        int secondLargestEven = evenPos[evenPos.length - 2]; 
+        int secondSmallestOdd = oddPos[1]; 
+
+        int sum = secondLargestEven + secondSmallestOdd;
+
+        System.out.println("Sum=" + sum);
+    }
+}
