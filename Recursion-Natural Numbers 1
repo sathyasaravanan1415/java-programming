@@ -1,6 +1,7 @@
 import java.util.*;
 public class main {
     public static void printNumbers(int current, int n) {
+num=n;
         if (current > n) {
             return;
         }
